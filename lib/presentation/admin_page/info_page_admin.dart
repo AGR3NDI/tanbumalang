@@ -26,6 +26,10 @@ class InfoPageAdmin extends StatelessWidget {
               decoration: InputDecoration(labelText: 'Description'),
               maxLines: 3,
             ),
+            TextField(
+              onChanged: (value) => infoController.linkController.value = value,
+              decoration: InputDecoration(labelText: 'Link'),
+            ),
             const SizedBox(height: 16),
             Obx(() => infoController.imageFile.value == null
                 ? GestureDetector(
